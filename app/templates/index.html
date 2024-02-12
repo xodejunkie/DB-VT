@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DB Management Tool</title>
+</head>
+<body>
+    <h1>Database Management and Visualization Tool</h1>
+    
+    <h2>Create User (SQL)</h2>
+    <form method="post" action="/create_user">
+        Username: <input type="text" name="username">
+        <input type="submit" value="Create User">
+    </form>
+    
+    <h2>Insert Document (MongoDB)</h2>
+    <form method="post" action="/insert_document">
+        Document: <input type="text" name="document">
+        <input type="submit" value="Insert Document">
+    </form>
+
+    <form method="post" action="/upload-csv" enctype="multipart/form-data">
+        Select CSV File to Upload:
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    
+
+    <h2>Sample Visualization</h2>
+    <div id="visualization">
+        <div id="visualization">
+            {{ plot_html|safe }}
+        </div>
+    </div>
+</body>
+</html>
